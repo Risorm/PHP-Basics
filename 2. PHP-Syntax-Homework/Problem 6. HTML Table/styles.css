@@ -1,0 +1,14 @@
+table {
+    border-collapse: collapse;
+    width: 250px;
+}
+
+tr td:first-of-type {
+    background-color: orange;
+    font-weight: 700;
+}
+
+tr td:last-of-type {
+    text-align: right;
+}
+
