@@ -22,11 +22,20 @@ Use colors by your choice. Use as quantity a random number in range [1...5]. Sty
 <?php function randCars() {
     if(isset($_POST['submitBtn'])) {
       $cars = explode(", ", $_POST['carsField']);
-    }
-
-}
-
-randCars();
-?>
+        $colors = array('yellow', 'red', 'pink', 'brown');
+    }?>
+<table>
+    <?php  foreach ($cars as $value):
+    $num = rand(1,5);
+    $colorIndex = rand(0,3); ?>
+    <tr>
+        <td><?php echo htmlentities($value)?></td>
+        <td><?php echo $num?></td>
+        <td><?php echo $colors[$colorIndex]?></td>
+    </tr>
+    <?php endforeach; }
+    randCars();
+    ?>
+</table>
 </body>
 </html>
